@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Results</string>
+   <string>ResultsWindow</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color:#D8D8D8</string>
