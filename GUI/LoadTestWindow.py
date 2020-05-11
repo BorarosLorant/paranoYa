@@ -11,12 +11,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_LoadTestWindow(object):
-    def setupUi(self, LoadTest):
-        LoadTest.setObjectName("LoadTest")
-        LoadTest.resize(544, 420)
-        self.horizontalLayout = QtWidgets.QHBoxLayout(LoadTest)
+    def setupUi(self, LoadTestWindow):
+        LoadTestWindow.setObjectName("LoadTest")
+        LoadTestWindow.resize(544, 420)
+        self.horizontalLayout = QtWidgets.QHBoxLayout(LoadTestWindow)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.Buttonwidget = QtWidgets.QWidget(LoadTest)
+        self.Buttonwidget = QtWidgets.QWidget(LoadTestWindow)
         self.Buttonwidget.setObjectName("Buttonwidget")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.Buttonwidget)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
@@ -25,7 +25,7 @@ class Ui_LoadTestWindow(object):
         self.Loadbtn.setObjectName("Loadbtn")
         self.verticalLayout_4.addWidget(self.Loadbtn)
         self.horizontalLayout.addWidget(self.Buttonwidget)
-        self.Infowidget = QtWidgets.QWidget(LoadTest)
+        self.Infowidget = QtWidgets.QWidget(LoadTestWindow)
         self.Infowidget.setObjectName("Infowidget")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.Infowidget)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
@@ -52,12 +52,12 @@ class Ui_LoadTestWindow(object):
         self.verticalLayout_3.addWidget(self.Info_Area)
         self.horizontalLayout.addWidget(self.Infowidget)
 
-        self.retranslateUi(LoadTest)
-        QtCore.QMetaObject.connectSlotsByName(LoadTest)
+        self.retranslateUi(LoadTestWindow)
+        QtCore.QMetaObject.connectSlotsByName(LoadTestWindow)
 
-    def retranslateUi(self, LoadTest):
+    def retranslateUi(self, LoadTestWindow):
         _translate = QtCore.QCoreApplication.translate
-        LoadTest.setWindowTitle(_translate("LoadTest", "Load Test Set"))
+        LoadTestWindow.setWindowTitle(_translate("LoadTest", "Load Test Set"))
         self.Loadbtn.setText(_translate("LoadTest", "Load"))
         self.label.setText(_translate("LoadTest", "Information"))
 
@@ -65,8 +65,8 @@ class Ui_LoadTestWindow(object):
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    LoadTest = QtWidgets.QDialog()
-    ui = Ui_LoadTest()
-    ui.setupUi(LoadTest)
-    LoadTest.show()
+    LoadTestWindow = QtWidgets.QDialog()
+    ui = Ui_LoadTestWindow()
+    ui.setupUi(LoadTestWindow)
+    LoadTestWindow.show()
     sys.exit(app.exec_())
