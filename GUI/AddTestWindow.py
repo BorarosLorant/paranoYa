@@ -11,18 +11,18 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_AddTestWindow(object):
-    def setupUi(self, Dialog):
-        Dialog.setObjectName("Dialog")
-        Dialog.resize(692, 546)
-        Dialog.setWindowOpacity(1.0)
-        Dialog.setStyleSheet("background-color:#D8D8D8;")
-        self.verticalLayout_4 = QtWidgets.QVBoxLayout(Dialog)
+    def setupUi(self, AddTestWindow):
+        AddTestWindow.setObjectName("Dialog")
+        AddTestWindow.resize(692, 546)
+        AddTestWindow.setWindowOpacity(1.0)
+        AddTestWindow.setStyleSheet("background-color:#D8D8D8;")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(AddTestWindow)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         spacerItem = QtWidgets.QSpacerItem(20, 55, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout_4.addItem(spacerItem)
         spacerItem1 = QtWidgets.QSpacerItem(20, 56, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout_4.addItem(spacerItem1)
-        self.Info_Area = QtWidgets.QWidget(Dialog)
+        self.Info_Area = QtWidgets.QWidget(AddTestWindow)
         self.Info_Area.setObjectName("Info_Area")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.Info_Area)
         self.horizontalLayout.setObjectName("horizontalLayout")
@@ -93,7 +93,7 @@ class Ui_AddTestWindow(object):
         self.verticalLayout_4.addItem(spacerItem2)
         spacerItem3 = QtWidgets.QSpacerItem(20, 56, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout_4.addItem(spacerItem3)
-        self.ButtonArea = QtWidgets.QWidget(Dialog)
+        self.ButtonArea = QtWidgets.QWidget(AddTestWindow)
         self.ButtonArea.setObjectName("ButtonArea")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.ButtonArea)
         self.verticalLayout.setObjectName("verticalLayout")
@@ -109,12 +109,12 @@ class Ui_AddTestWindow(object):
         spacerItem4 = QtWidgets.QSpacerItem(671, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.verticalLayout_4.addItem(spacerItem4)
 
-        self.retranslateUi(Dialog)
-        QtCore.QMetaObject.connectSlotsByName(Dialog)
+        self.retranslateUi(AddTestWindow)
+        QtCore.QMetaObject.connectSlotsByName(AddTestWindow)
 
-    def retranslateUi(self, Dialog):
+    def retranslateUi(self, AddTestWindow):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "AddTest"))
+        AddTestWindow.setWindowTitle(_translate("Dialog", "AddTest"))
         self.Test_Combo.setItemText(0, _translate("Dialog", "Test1"))
         self.Test_Combo.setItemText(1, _translate("Dialog", "Test2"))
         self.Test_Combo.setItemText(2, _translate("Dialog", "Test3"))
@@ -141,8 +141,8 @@ class Ui_AddTestWindow(object):
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    Dialog = QtWidgets.QDialog()
-    ui = Ui_Dialog()
-    ui.setupUi(Dialog)
-    Dialog.show()
+    AddTestWindow = QtWidgets.QDialog()
+    ui = Ui_AddTestWindow()
+    ui.setupUi(AddTestWindow)
+    AddTestWindow.show()
     sys.exit(app.exec_())
