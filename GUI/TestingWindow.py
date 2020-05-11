@@ -11,13 +11,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_TestingWindow(object):
-    def setupUi(self, Testing):
-        Testing.setObjectName("Testing")
-        Testing.resize(665, 519)
-        Testing.setStyleSheet("background-color:#D8D8D8")
-        self.horizontalLayout = QtWidgets.QHBoxLayout(Testing)
+    def setupUi(self, TestingWindow):
+        TestingWindow.setObjectName("Testing")
+        TestingWindow.resize(665, 519)
+        TestingWindow.setStyleSheet("background-color:#D8D8D8")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(TestingWindow)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.widget = QtWidgets.QWidget(Testing)
+        self.widget = QtWidgets.QWidget(TestingWindow)
         self.widget.setObjectName("widget")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.widget)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
@@ -38,7 +38,7 @@ class Ui_TestingWindow(object):
         self.CancelAllbtn.setObjectName("CancelAllbtn")
         self.verticalLayout_4.addWidget(self.CancelAllbtn)
         self.horizontalLayout.addWidget(self.widget)
-        self.widget_2 = QtWidgets.QWidget(Testing)
+        self.widget_2 = QtWidgets.QWidget(TestingWindow)
         self.widget_2.setObjectName("widget_2")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.widget_2)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
@@ -65,12 +65,12 @@ class Ui_TestingWindow(object):
         self.verticalLayout_3.addWidget(self.Info_Area)
         self.horizontalLayout.addWidget(self.widget_2)
 
-        self.retranslateUi(Testing)
-        QtCore.QMetaObject.connectSlotsByName(Testing)
+        self.retranslateUi(TestingWindow)
+        QtCore.QMetaObject.connectSlotsByName(TestingWindow)
 
-    def retranslateUi(self, Testing):
+    def retranslateUi(self, TestingWindow):
         _translate = QtCore.QCoreApplication.translate
-        Testing.setWindowTitle(_translate("Testing", "Testing"))
+        TestingWindow.setWindowTitle(_translate("Testing", "Testing"))
         self.Pausebtn.setText(_translate("Testing", "Pause"))
         self.Continuebtn.setText(_translate("Testing", "Continue"))
         self.Cancelbtn.setText(_translate("Testing", "Cancel"))
@@ -81,8 +81,8 @@ class Ui_TestingWindow(object):
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    Testing = QtWidgets.QDialog()
-    ui = Ui_Testing()
-    ui.setupUi(Testing)
-    Testing.show()
+    TestingWindow = QtWidgets.QDialog()
+    ui = Ui_TestingWindow()
+    ui.setupUi(TestingWindow)
+    TestingWindow.show()
     sys.exit(app.exec_())
