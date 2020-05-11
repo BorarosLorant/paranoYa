@@ -11,13 +11,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_GenerateWindow(object):
-    def setupUi(self, Generate):
-        Generate.setObjectName("Generate")
-        Generate.resize(286, 239)
-        Generate.setStyleSheet("background-color:#D8D8D8")
-        self.verticalLayout_3 = QtWidgets.QVBoxLayout(Generate)
+    def setupUi(self, GenerateWindow):
+        GenerateWindow.setObjectName("Generate")
+        GenerateWindow.resize(286, 239)
+        GenerateWindow.setStyleSheet("background-color:#D8D8D8")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(GenerateWindow)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
-        self.ButtonBox = QtWidgets.QWidget(Generate)
+        self.ButtonBox = QtWidgets.QWidget(GenerateWindow)
         self.ButtonBox.setObjectName("ButtonBox")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.ButtonBox)
         self.verticalLayout.setObjectName("verticalLayout")
@@ -30,7 +30,7 @@ class Ui_GenerateWindow(object):
         self.GenGeneratebtn.setObjectName("GenGeneratebtn")
         self.verticalLayout.addWidget(self.GenGeneratebtn)
         self.verticalLayout_3.addWidget(self.ButtonBox)
-        self.ParamBox = QtWidgets.QWidget(Generate)
+        self.ParamBox = QtWidgets.QWidget(GenerateWindow)
         self.ParamBox.setObjectName("ParamBox")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.ParamBox)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
@@ -68,12 +68,12 @@ class Ui_GenerateWindow(object):
         self.verticalLayout_2.addWidget(self.GenInput3)
         self.verticalLayout_3.addWidget(self.ParamBox)
 
-        self.retranslateUi(Generate)
-        QtCore.QMetaObject.connectSlotsByName(Generate)
+        self.retranslateUi(GenerateWindow)
+        QtCore.QMetaObject.connectSlotsByName(GenerateWindow)
 
-    def retranslateUi(self, Generate):
+    def retranslateUi(self, GenerateWindow):
         _translate = QtCore.QCoreApplication.translate
-        Generate.setWindowTitle(_translate("Generate", "Generate"))
+        GenerateWindow.setWindowTitle(_translate("Generate", "Generate"))
         self.GenInfobtn.setText(_translate("Generate", "Info"))
         self.GenGeneratebtn.setText(_translate("Generate", "Generate"))
         self.GenParam1lbl.setText(_translate("Generate", "Destination path"))
@@ -91,8 +91,9 @@ class Ui_GenerateWindow(object):
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    Generate = QtWidgets.QDialog()
-    ui = Ui_Generate()
-    ui.setupUi(Generate)
-    Generate.show()
+    GenerateWindow = QtWidgets.QDialog()
+    ui = Ui_GenerateWindow()
+    ui.setupUi(GenerateWindow)
+    GenerateWindow.show()
     sys.exit(app.exec_())
+
