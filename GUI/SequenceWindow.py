@@ -11,13 +11,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_SequenceWindow(object):
-    def setupUi(self, Dialog):
-        Dialog.setObjectName("Dialog")
-        Dialog.resize(420, 339)
-        Dialog.setStyleSheet("background-color:#D8D8D8")
-        self.horizontalLayout = QtWidgets.QHBoxLayout(Dialog)
+    def setupUi(self, SequenceWindow):
+        SequenceWindow.setObjectName("Dialog")
+        SequenceWindow.resize(420, 339)
+        SequenceWindow.setStyleSheet("background-color:#D8D8D8")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(SequenceWindow)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.Input_Area_Sequence = QtWidgets.QWidget(Dialog)
+        self.Input_Area_Sequence = QtWidgets.QWidget(SequenceWindow)
         self.Input_Area_Sequence.setObjectName("Input_Area_Sequence")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.Input_Area_Sequence)
         self.verticalLayout.setObjectName("verticalLayout")
@@ -51,20 +51,20 @@ class Ui_SequenceWindow(object):
         self.FileList.addItem(item)
         self.verticalLayout.addWidget(self.FileList)
         self.horizontalLayout.addWidget(self.Input_Area_Sequence)
-        self.buttonBox = QtWidgets.QDialogButtonBox(Dialog)
+        self.buttonBox = QtWidgets.QDialogButtonBox(SequenceWindow)
         self.buttonBox.setOrientation(QtCore.Qt.Vertical)
         self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
         self.buttonBox.setObjectName("buttonBox")
         self.horizontalLayout.addWidget(self.buttonBox)
 
-        self.retranslateUi(Dialog)
-        self.buttonBox.accepted.connect(Dialog.accept)
-        self.buttonBox.rejected.connect(Dialog.reject)
-        QtCore.QMetaObject.connectSlotsByName(Dialog)
+        self.retranslateUi(SequenceWindow)
+        self.buttonBox.accepted.connect(SequenceWindow.accept)
+        self.buttonBox.rejected.connect(SequenceWindow.reject)
+        QtCore.QMetaObject.connectSlotsByName(SequenceWindow)
 
-    def retranslateUi(self, Dialog):
+    def retranslateUi(self, SequenceWindow):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Sequence"))
+        SequenceWindow.setWindowTitle(_translate("Dialog", "Sequence"))
         self.Input_path_lbl.setText(_translate("Dialog", "Set input path:"))
         self.radbtn_1mb.setText(_translate("Dialog", "1 MB files"))
         self.radbtn_10mb.setText(_translate("Dialog", "10 MB files"))
@@ -84,8 +84,8 @@ class Ui_SequenceWindow(object):
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    Dialog = QtWidgets.QDialog()
-    ui = Ui_Dialog()
-    ui.setupUi(Dialog)
-    Dialog.show()
+    SequenceWindow = QtWidgets.QDialog()
+    ui = Ui_SequenceWindow()
+    ui.setupUi(SequenceWindow)
+    SequenceWindow.show()
     sys.exit(app.exec_())
