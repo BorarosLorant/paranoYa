@@ -18,27 +18,27 @@ class Ui_ResultsWindow(object):
         self.ui.setupUi(self.window)
         self.window.show()
 
-    def setupUi(self, Dialog):
-        Dialog.setObjectName("Dialog")
-        Dialog.resize(610, 432)
-        Dialog.setStyleSheet("background-color:#D8D8D8")
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(Dialog)
+    def setupUi(self, ResultsWindow):
+        ResultsWindow.setObjectName("Dialog")
+        ResultsWindow.resize(610, 432)
+        ResultsWindow.setStyleSheet("background-color:#D8D8D8")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(ResultsWindow)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.resultArea = QtWidgets.QWidget(Dialog)
+        self.resultArea = QtWidgets.QWidget(ResultsWindow)
         self.resultArea.setObjectName("resultArea")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.resultArea)
         self.verticalLayout.setObjectName("verticalLayout")
         self.verticalLayout_2.addWidget(self.resultArea)
-        self.Resultslbl = QtWidgets.QLabel(Dialog)
+        self.Resultslbl = QtWidgets.QLabel(ResultsWindow)
         self.Resultslbl.setStyleSheet("color:#520202")
         self.Resultslbl.setAlignment(QtCore.Qt.AlignCenter)
         self.Resultslbl.setObjectName("Resultslbl")
         self.verticalLayout_2.addWidget(self.Resultslbl)
-        self.resultTable = QtWidgets.QTableView(Dialog)
+        self.resultTable = QtWidgets.QTableView(ResultsWindow)
         self.resultTable.setStyleSheet("background-color:#FFFFFF;color:#520202")
         self.resultTable.setObjectName("resultTable")
         self.verticalLayout_2.addWidget(self.resultTable)
-        self.ButtonArea = QtWidgets.QWidget(Dialog)
+        self.ButtonArea = QtWidgets.QWidget(ResultsWindow)
         self.ButtonArea.setObjectName("ButtonArea")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.ButtonArea)
         self.horizontalLayout.setObjectName("horizontalLayout")
@@ -56,12 +56,12 @@ class Ui_ResultsWindow(object):
         self.horizontalLayout.addWidget(self.pushButton_3)
         self.verticalLayout_2.addWidget(self.ButtonArea)
 
-        self.retranslateUi(Dialog)
-        QtCore.QMetaObject.connectSlotsByName(Dialog)
+        self.retranslateUi(ResultsWindow)
+        QtCore.QMetaObject.connectSlotsByName(ResultsWindow)
 
-    def retranslateUi(self, Dialog):
+    def retranslateUi(self, ResultsWindow):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Results"))
+        ResultsWindow.setWindowTitle(_translate("Dialog", "Results"))
         self.Resultslbl.setText(_translate("Dialog", "Results"))
         self.pushButton.setText(_translate("Dialog", "Summary"))
         self.pushButton_2.setText(_translate("Dialog", "Ok"))
@@ -71,8 +71,8 @@ class Ui_ResultsWindow(object):
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    Dialog = QtWidgets.QDialog()
-    ui = Ui_Dialog()
-    ui.setupUi(Dialog)
-    Dialog.show()
+    ResultsWindow = QtWidgets.QDialog()
+    ui = Ui_ResultsWindow()
+    ui.setupUi(ResultsWindow)
+    ResultsWindow.show()
     sys.exit(app.exec_())
